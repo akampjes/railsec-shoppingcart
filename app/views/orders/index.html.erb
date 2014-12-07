@@ -1,0 +1,28 @@
+<h1>Listing orders</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Address</th>
+      <th>Total</th>
+      <th>Status</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @orders.each do |order| %>
+      <tr>
+        <td><%= order.address %></td>
+        <td><%= order.total %></td>
+        <td><%= order.status %></td>
+        <td><%= link_to 'Checkout', edit_order_path(order) %></td>
+        <td><%= link_to 'Destroy', order, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Order', new_order_path %>

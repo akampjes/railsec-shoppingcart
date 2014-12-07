@@ -1,0 +1,27 @@
+<%= form_for(@order) do |f| %>
+  <% if @order.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@order.errors.count, "error") %> prohibited this order from being saved:</h2>
+
+      <ul>
+      <% @order.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <h3>Make your payment here</h3>
+  <p>Use the CC number 4111111111111111 if you want to test payment but pretend that you don't have a credit card to use to win ;)</p>
+  <p>IRL, never store creditcard numbers, use a payment processor.</p>
+
+  <div class="field">
+    <%= f.label :fakecard %><br>
+    <%= f.text_field :fakecard %>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit 'Make payment' %>
+  </div>
+<% end %>

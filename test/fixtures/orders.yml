@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  address: MyText
+  status: MyText
+  total: 9.99
+  user_id: 
+
+two:
+  address: MyText
+  status: MyText
+  total: 9.99
+  user_id: 
