@@ -68,6 +68,6 @@ class OrdersController < ApplicationController
     end
 
     def order_params
-      params.require(:order).permit(:address, :status)
+      params.require(:order).permit(:address, :status, :fakecard)
     end
 end
